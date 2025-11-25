@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Modo día (por defecto) */
+:root {
+  --navbar-bg: #ffeb3b; /* amarillo banana */
+  --text-color: #333;
+  --background-color: #fff;
+}
+
+/* Modo noche */
+body.dark-mode {
+  --navbar-bg: #333;
+  --text-color: #f1f1f1;
+  --background-color: #121212;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

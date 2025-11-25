@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="logo">🍌 Bananin</div>
+  <ul class="nav-links">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="">Inicio</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="about">Sobre nosotros</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="games">Nuestros juegos</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="contact">Contacto</a>
+    </li>
+  </ul>
+
+  <button class="theme-toggle" (click)="toggleTheme()">
+    {{ isDarkMode ? '🌙 Noche' : '🌞 Día' }}
+  </button>
+</nav>
