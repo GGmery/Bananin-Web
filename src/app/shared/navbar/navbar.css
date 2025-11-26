@@ -1,32 +1,61 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: var(--navbar-bg);
-  padding: 10px 20px;
-  color: var(--text-color);
+  justify-content: space-between;
+  background: linear-gradient(90deg, #ce22dd, #a63aff); /* morado degradado */
+  padding: 15px 40px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f9e65c; /* amarillo banana */
+  text-shadow: 0 0 8px rgba(249, 230, 92, 0.6);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
+.nav-links li a:hover {
+  color: #f9e65c;
+  border-bottom: 2px solid #f9e65c;
+}
+
+.nav-links li.active a {
+  color: #f9e65c;
+  border-bottom: 2px solid #f9e65c;
+}
+
+/* Botón de tema */
 .theme-toggle {
+  background: #f9e65c;
+  color: #6a00f4;
   border: none;
-  background: transparent;
-  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  background: #fff;
+  transform: scale(1.05);
 }

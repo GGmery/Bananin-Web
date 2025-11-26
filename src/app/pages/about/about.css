@@ -1,0 +1,154 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Alternar colores en modo día */
+.about-section.left-image {
+  background-color: #fffbe6; /* amarillo pastel */
+  color: #2c2c2c;
+}
+
+.about-section.right-image {
+  background-color: #f3e8ff; /* morado pastel */
+  color: #2c2c2c;
+}
+
+/* Imagenes estilo tarjeta */
+.about-section img {
+  max-width: 280px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.about-section h2 {
+  color: #6a00f4; /* morado vibrante */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-section .text {
+  max-width: 450px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ------------------- */
+/* Modo noche mejorado */
+/* ------------------- */
+body.dark-mode .about-section {
+  background-color: #0f0f1a; /* fondo más oscuro */
+  color: #eaeaea; /* texto claro */
+}
+
+body.dark-mode .about-section.left-image {
+  background: linear-gradient(135deg, #1e1e2f, #2a1f3d); /* degradado morado oscuro */
+}
+
+body.dark-mode .about-section.right-image {
+  background: linear-gradient(135deg, #121212, #1e1e2f); /* degradado gris oscuro */
+}
+
+body.dark-mode .about-section h2 {
+  color: #f9e65c; /* amarillo banana para títulos */
+  text-shadow: 0 0 8px rgba(249, 230, 92, 0.6);
+}
+
+body.dark-mode .about-section img {
+  background: #1a1a1a; /* fondo oscuro para tarjetas */
+  box-shadow: 0 0 15px rgba(216, 180, 254, 0.4); /* glow morado suave */
+}
+
+/* Intro */
+.about-intro {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f3e8ff; /* morado pastel día */
+  color: #2c2c2c;
+}
+
+.about-intro h1 {
+  font-size: 2.5rem;
+  color: #6a00f4;
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Intro noche */
+body.dark-mode .about-intro {
+  background: linear-gradient(180deg, #121212, #1e1e2f);
+  color: #eaeaea;
+}
+
+body.dark-mode .about-intro h1 {
+  color: #d8b4fe; /* morado pastel */
+  text-shadow: 0 0 10px rgba(216, 180, 254, 0.6);
+}
+
+body.dark-mode .about-intro p {
+  color: #ccc; /* gris claro para texto */
+}
+
+/* Índice de integrantes */
+.about-index {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fffbe6; /* amarillo pastel día */
+}
+
+.about-index h2 {
+  color: #6a00f4;
+  margin-bottom: 15px;
+}
+
+.about-index ul {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.about-index ul li a {
+  text-decoration: none;
+  color: #6a00f4;
+  font-weight: 700;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.about-index ul li a:hover {
+  color: #f9e65c;
+  transform: scale(1.1);
+}
+
+/* Índice noche */
+body.dark-mode .about-index {
+  background-color: #1e1e2f; /* morado oscuro */
+}
+
+body.dark-mode .about-index h2 {
+  color: #f9e65c; /* amarillo banana */
+}
+
+body.dark-mode .about-index ul li a {
+  color: #d8b4fe; /* morado pastel */
+  transition: color 0.3s, transform 0.2s, text-shadow 0.3s;
+}
+
+body.dark-mode .about-index ul li a:hover {
+  color: #f9e65c;
+  text-shadow: 0 0 8px rgba(249, 230, 92, 0.6);
+  transform: scale(1.1);
+}
