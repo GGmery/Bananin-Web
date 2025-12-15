@@ -202,3 +202,18 @@ body.dark-mode .about-index ul li a:hover {
   color: var(--accent);
   font-family: 'Mochi', sans-serif;
 }
+
+.extra-img {
+  display: block;
+  margin: 1rem auto 0 auto;
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.extra-img:hover {
+  transform: scale(1.1); /* se amplía un 10% */
+  box-shadow: 0 0 12px rgba(0,0,0,0.5); /* sombra más intensa */
+}
