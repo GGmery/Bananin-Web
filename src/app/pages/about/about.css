@@ -1,3 +1,39 @@
+/* Intro */
+.about-intro {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-color);  /* hereda del tema */
+}
+
+.about-intro h1 {
+  font-size: 2.5rem;
+  color: #6a00f4; /* acento morado en modo día */
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color); /* hereda del tema */
+}
+
+/* Intro noche */
+body.dark-mode .about-intro {
+  background: linear-gradient(180deg, #121212, #1e1e2f);
+  color: var(--text-color); /* claro en modo noche */
+}
+
+body.dark-mode .about-intro h1 {
+  color: #d8b4fe; /* morado pastel noche */
+  text-shadow: 0 0 10px rgba(216, 180, 254, 0.6);
+}
+
+body.dark-mode .about-intro p {
+  color: var(--text-color); /* claro en modo noche */
+}
+
 .about-section {
   display: flex;
   align-items: center;
@@ -5,17 +41,18 @@
   padding: 60px 40px;
   gap: 30px;
   transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color); /* hereda del tema */
 }
 
 /* Alternar colores en modo día */
 .about-section.left-image {
+  flex-direction: row;
   background-color: #fffbe6; /* amarillo pastel */
-  color: #2c2c2c;
 }
 
 .about-section.right-image {
+  flex-direction: row-reverse;
   background-color: #f3e8ff; /* morado pastel */
-  color: #2c2c2c;
 }
 
 /* Imagenes estilo tarjeta */
@@ -25,11 +62,17 @@
   background: #fff;
   padding: 10px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
 }
 
 /* Texto */
 .about-section h2 {
-  color: #6a00f4; /* morado vibrante */
+  color: #6a00f4; /* acento morado */
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -40,20 +83,13 @@
   line-height: 1.6;
 }
 
-/* ------------------- */
-/* Modo noche mejorado */
-/* ------------------- */
-body.dark-mode .about-section {
-  background-color: #0f0f1a; /* fondo más oscuro */
-  color: #eaeaea; /* texto claro */
-}
-
+/* Modo noche */
 body.dark-mode .about-section.left-image {
-  background: linear-gradient(135deg, #1e1e2f, #2a1f3d); /* degradado morado oscuro */
+  background: linear-gradient(135deg, #1e1e2f, #2a1f3d);
 }
 
 body.dark-mode .about-section.right-image {
-  background: linear-gradient(135deg, #121212, #1e1e2f); /* degradado gris oscuro */
+  background: linear-gradient(135deg, #121212, #1e1e2f);
 }
 
 body.dark-mode .about-section h2 {
@@ -62,100 +98,13 @@ body.dark-mode .about-section h2 {
 }
 
 body.dark-mode .about-section img {
-  background: #1a1a1a; /* fondo oscuro para tarjetas */
-  box-shadow: 0 0 15px rgba(216, 180, 254, 0.4); /* glow morado suave */
+  background: #1a1a1a;
+  box-shadow: 0 0 15px rgba(216, 180, 254, 0.4);
 }
 
-/* Intro */
-.about-intro {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f3e8ff; /* morado pastel día */
-  color: #2c2c2c;
-}
-
-.about-intro h1 {
-  font-size: 2.5rem;
-  color: #6a00f4;
-  margin-bottom: 20px;
-}
-
-.about-intro p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
-}
-
-/* Intro noche */
-body.dark-mode .about-intro {
-  background: linear-gradient(180deg, #121212, #1e1e2f);
-  color: #eaeaea;
-}
-
-body.dark-mode .about-intro h1 {
-  color: #d8b4fe; /* morado pastel */
-  text-shadow: 0 0 10px rgba(216, 180, 254, 0.6);
-}
-
-body.dark-mode .about-intro p {
-  color: #ccc; /* gris claro para texto */
-}
-
-/* Índice de integrantes */
-.about-index {
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #fffbe6; /* amarillo pastel día */
-}
-
-.about-index h2 {
-  color: #6a00f4;
-  margin-bottom: 15px;
-}
-
-.about-index ul {
-  list-style: none;
-  padding: 0;
-  display: inline-flex;
-  gap: 20px;
-}
-
-.about-index ul li a {
-  text-decoration: none;
-  color: #6a00f4;
-  font-weight: 700;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.about-index ul li a:hover {
-  color: #f9e65c;
-  transform: scale(1.1);
-}
-
-/* Índice noche */
-body.dark-mode .about-index {
-  background-color: #1e1e2f; /* morado oscuro */
-}
-
-body.dark-mode .about-index h2 {
-  color: #f9e65c; /* amarillo banana */
-}
-
-body.dark-mode .about-index ul li a {
-  color: #d8b4fe; /* morado pastel */
-  transition: color 0.3s, transform 0.2s, text-shadow 0.3s;
-}
-
-body.dark-mode .about-index ul li a:hover {
-  color: #f9e65c;
-  text-shadow: 0 0 8px rgba(249, 230, 92, 0.6);
-  transform: scale(1.1);
-}
-
+/* Roast-style */
 .about-section.roast-style {
-  background: rgba(124, 77, 255, 0.1);
-  border: 2px dashed var(--accent);
+  background: rgba(124, 77, 255, 0.05);
   border-radius: 12px;
   padding: 2rem;
   margin: 2rem 0;
@@ -164,56 +113,40 @@ body.dark-mode .about-index ul li a:hover {
   gap: 2rem;
 }
 
-.roast-style .text {
-  flex: 1;
+body.dark-mode .about-section.roast-style {
+  background: rgba(124, 77, 255, 0.15);
 }
 
 .roast-style h2 {
-  font-family: 'Mochi', sans-serif;
   font-size: 1.8rem;
-  color: var(--accent);
+  color: #6a00f4;
   margin-bottom: 1rem;
 }
 
-.roast-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem 0;
+body.dark-mode .roast-style h2 {
+  color: #f9e65c;
 }
 
 .roast-list li {
   margin: 0.5rem 0;
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
-  color: var(--header-text);
+  color: var(--text-color); /* usa variable global */
 }
 
 .roast-list li strong {
-  color: var(--accent);
+  color: #6a00f4;
+}
+
+body.dark-mode .roast-list li strong {
+  color: #f9e65c;
 }
 
 .summary {
   font-style: italic;
-  color: var(--link-color);
+  color: var(--text-color); /* usa variable global */
 }
 
-.countdown {
-  font-weight: bold;
-  color: var(--accent);
-  font-family: 'Mochi', sans-serif;
-}
-
-.extra-img {
-  display: block;
-  margin: 1rem auto 0 auto;
-  max-width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.extra-img:hover {
-  transform: scale(1.1); /* se amplía un 10% */
-  box-shadow: 0 0 12px rgba(0,0,0,0.5); /* sombra más intensa */
+body.dark-mode .summary {
+  color: #d8b4fe; /* resalta en morado pastel */
 }
