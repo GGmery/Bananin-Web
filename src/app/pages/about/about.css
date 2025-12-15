@@ -150,3 +150,82 @@ body.dark-mode .roast-list li strong {
 body.dark-mode .summary {
   color: #d8b4fe; /* resalta en morado pastel */
 }
+
+.about-extra {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fffbe6; /* día */
+  color: var(--text-color);
+}
+
+body.dark-mode .about-extra {
+  background: linear-gradient(180deg, #121212, #1e1e2f);
+  color: var(--text-color);
+}
+
+.about-extra h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6a00f4;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .about-extra h2 {
+  color: #f9e65c;
+}
+
+.about-extra .intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* Caja con bordes */
+.scroll-box {
+  border-top: 2px solid #6a00f4;
+  border-bottom: 2px solid #6a00f4;
+  padding: 20px 0;
+  overflow: hidden;
+  max-width: 70%; /* centrado y más estrecho */
+  margin: 0 auto;
+}
+
+body.dark-mode .scroll-box {
+  border-color: #f9e65c;
+}
+
+/* Líneas */
+.scroll-line {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.scroll-line span {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Animaciones */
+.left-to-right span {
+  transform: translateX(-100%);
+  animation: scroll-right 18s linear infinite;
+}
+
+.right-to-left span {
+  transform: translateX(100%);
+  animation: scroll-left 18s linear infinite;
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
