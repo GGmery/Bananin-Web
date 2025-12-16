@@ -1,51 +1,60 @@
 /* Hero principal */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background-color: var(--navbar-bg); /* amarillo banana en día, gris oscuro en noche */
+  padding: 160px 20px; /* hero muy alto */
+  background: linear-gradient(180deg, var(--navbar-bg), rgba(255, 235, 59, 0.15));
   color: var(--text-color);
+  position: relative;
 }
 
 .hero .logo {
-  max-width: 150px;
-  margin-bottom: 20px;
+  max-width: 200px;
+  margin-bottom: 40px;
   animation: fadeInScale 1s ease forwards;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 4.5rem; /* tipografía muy grande */
+  font-weight: 900;
   color: var(--text-color);
   text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
   animation: slideUp 1s ease forwards;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: var(--text-color);
 }
 
 .cta-btn {
   background: var(--text-color);
   color: var(--background-color);
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  transition: transform 0.2s, background 0.3s;
+  padding: 18px 40px;
+  border-radius: 50px; /* pill style */
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
-  transform: scale(1.05) rotate(-2deg);
+  transform: scale(1.08);
+  background: #444;
 }
 
-/* Secciones */
+/* Secciones alternas */
 .section {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 60px 40px;
-  gap: 30px;
+  justify-content: space-between;
+  padding: 120px 80px;
+  gap: 60px;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
@@ -60,42 +69,61 @@
 
 /* Imagenes estilo tarjeta */
 .section img {
-  max-width: 320px;
-  border-radius: 12px;
+  max-width: 420px;
+  border-radius: 20px;
   background: var(--background-color);
-  padding: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
   animation: fadeInScale 1s ease forwards;
 }
 
 .section h2 {
   color: var(--text-color);
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-weight: 800;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .section .text {
-  max-width: 450px;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  max-width: 600px;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: var(--text-color);
 }
 
-/* Video */
+/* Sección centrada: vídeo */
 .video {
   flex-direction: column;
   text-align: center;
+  padding: 140px 40px;
+}
+
+.video h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.video p {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  font-size: 1.3rem;
+  line-height: 1.9;
 }
 
 .video iframe {
   margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
   animation: zoomIn 1s ease forwards;
   transition: box-shadow 0.3s ease;
 }
 
 .video iframe:hover {
-  box-shadow: 0 0 25px rgba(255, 235, 59, 0.6); /* glow amarillo */
+  box-shadow: 0 0 35px rgba(255, 235, 59, 0.6); /* glow amarillo */
 }
 
 /* Animaciones */
