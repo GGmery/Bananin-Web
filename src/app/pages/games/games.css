@@ -1,0 +1,130 @@
+/* Sección general */
+.games-section {
+  text-align: center;
+  margin-bottom: 60px; /* separación con el resto de la página */
+  padding: 100px 20px 60px; /* más aire arriba y abajo */
+}
+
+.games-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 80px; /* gran separación debajo del título */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de cada juego */
+.game-card {
+  margin-bottom: 100px; /* más espacio entre cada juego */
+  padding-top: 20px;
+  border-top: 2px solid rgba(0,0,0,0.05); /* línea sutil separadora */
+}
+
+/* Encabezado: título + logo */
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px; /* más espacio debajo del título+logo */
+}
+
+.game-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.game-header img {
+  max-width: 70px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.game-header img:hover {
+  transform: scale(1.1);
+}
+
+/* Mini-cards */
+.mini-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* más espacio entre mini-cards */
+}
+
+.mini-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background: var(--background-color);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.mini-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.mini-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #6a00f4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mini-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: black;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* Variantes pastel */
+.mini-card.players { background: #e6f0ff; border: 2px solid #a3c4ff; }
+.mini-card.info { background: #e9ffe6; border: 2px solid #9be89b; }
+.mini-card.fun-fact { background: #ffe6f7; border: 2px solid #ffb3da; font-style: italic; }
+.mini-card.video { background: #fffbe6; border: 2px solid #ffe066; }
+
+/* Video */
+.mini-card.video iframe {
+  border-radius: 12px;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-top: 15px;
+}
+
+/* Logos gachas */
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.logos img {
+  max-width: 65px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(106,0,244,0.4);
+}
