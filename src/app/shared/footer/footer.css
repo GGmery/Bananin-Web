@@ -29,3 +29,46 @@
   color: #f9e65c; /* amarillo banana en hover */
   transform: scale(1.1);
 }
+
+/* ============================================================
+   📱 FOOTER RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 20px 15px;
+    font-size: 0.9rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .footer .social-links {
+    margin-top: 12px;
+  }
+
+  .footer .social-links a {
+    margin: 0 10px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra pequeño */
+@media (max-width: 400px) {
+
+  .footer {
+    padding: 18px 12px;
+  }
+
+  .footer p {
+    font-size: 0.95rem;
+  }
+
+  .footer .social-links a {
+    margin: 0 8px;
+    font-size: 1rem;
+  }
+}
+

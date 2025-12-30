@@ -229,3 +229,100 @@ body.dark-mode .scroll-box {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
+
+/* ============================================================
+   📱 RESPONSIVE ELEGANTE Y EQUILIBRADO
+   ============================================================ */
+@media (max-width: 900px) {
+
+  /* Intro */
+  .about-intro {
+    padding: 50px 20px;
+  }
+
+  .about-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-intro p {
+    font-size: 1.15rem;
+    max-width: 85%;
+  }
+
+  /* Secciones */
+  .about-section {
+    flex-direction: column;
+    text-align: left;
+    padding: 50px 30px;
+    gap: 25px;
+  }
+
+  .about-section img {
+    max-width: 320px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .about-section .text {
+    max-width: 100%;
+    font-size: 1.05rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Roast-style */
+  .about-section.roast-style {
+    padding: 1.8rem;
+    gap: 1.5rem;
+  }
+
+  .roast-style h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Extra */
+  .about-extra {
+    padding: 50px 20px;
+  }
+
+  .about-extra h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-extra .intro-text {
+    font-size: 1.15rem;
+  }
+
+  /* Scroll box */
+  .scroll-box {
+    max-width: 80%;
+  }
+}
+
+/* ============================================================
+   📱 MÓVIL PEQUEÑO (sin romper diseño)
+   ============================================================ */
+@media (max-width: 600px) {
+
+  .about-intro h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  .about-section img {
+    width: 80%;
+  }
+
+  .about-extra h2 {
+    font-size: 1.5rem;
+  }
+
+  .scroll-box {
+    max-width: 95%;
+  }
+}

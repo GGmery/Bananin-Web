@@ -1,6 +1,14 @@
 <nav class="navbar">
   <div class="logo">🍌 Bananin eSports</div>
-  <ul class="nav-links">
+
+  <!-- Botón hamburguesa SOLO para móvil -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" [class.open]="menuOpen">
     <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <a routerLink="">Inicio</a>
     </li>

@@ -11,6 +11,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class NavbarComponent {
   isDarkMode = false;
 
+  menuOpen = false;
+
+toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+}
+
+
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     if (this.isDarkMode) {
