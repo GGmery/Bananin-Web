@@ -20,4 +20,14 @@ describe('Contact', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show the collaboration email and social links', () => {
+    const emailLink: HTMLAnchorElement = fixture.nativeElement.querySelector('.email-card');
+    const socialLinks: NodeListOf<HTMLAnchorElement> =
+      fixture.nativeElement.querySelectorAll('.social-links a');
+
+    expect(emailLink.href).toContain('mailto:losbananosdeportistas@gmail.com');
+    expect(socialLinks.length).toBe(4);
+    expect(fixture.nativeElement.textContent).toContain('¿Colaboramos?');
+  });
 });

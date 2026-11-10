@@ -20,4 +20,10 @@ describe('Home', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should use the YouTube embed URL for the video', () => {
+    const iframe = fixture.nativeElement.querySelector('iframe');
+
+    expect(iframe.src).toBe('https://www.youtube.com/embed/2swvBZAHIqM');
+  });
 });

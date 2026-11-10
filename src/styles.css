@@ -16,3 +16,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+.about-section .gallery-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #6a00f4;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+body.dark-mode .about-section .gallery-link {
+  background: #f9e65c;
+  color: #333;
+}

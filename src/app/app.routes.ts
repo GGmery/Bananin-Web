@@ -1,20 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
-import { About} from './pages/about/about';
+import { About } from './pages/about/about';
 import { Games } from './pages/games/games';
 import { Contact } from './pages/contact/contact';
+import { Gallery } from './pages/gallery/gallery';
 
 export const routes: Routes = [
-  { path: '', component: Home },          // Inicio
-  { path: 'about', component: About },    // Sobre nosotros
-  { path: 'games', component: Games },    // Nuestros juegos
-  { path: 'contact', component: Contact }, // Contacto
-  { path: '**', redirectTo: '' }                   // Ruta por defecto (404 → Inicio)
+  { path: '', component: Home },
+  { path: 'about', component: About },
+  { path: 'games', component: Games },
+  { path: 'gallery', component: Gallery },
+  { path: 'contact', component: Contact },
+  { path: '**', redirectTo: '' },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
