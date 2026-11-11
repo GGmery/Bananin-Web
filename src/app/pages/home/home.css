@@ -1,15 +1,16 @@
 /* Hero principal */
 .hero {
   text-align: center;
-  padding: 160px 20px; /* hero muy alto */
+  padding: 64px 20px 160px;
   background: linear-gradient(180deg, var(--navbar-bg), rgba(255, 235, 59, 0.15));
   color: var(--text-color);
   position: relative;
 }
 
 .hero .logo {
-  max-width: 200px;
-  margin-bottom: 40px;
+  width: min(320px, 80vw);
+  max-width: 100%;
+  margin-bottom: 8px;
   animation: fadeInScale 1s ease forwards;
 }
 
@@ -19,7 +20,7 @@
   color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   animation: slideUp 1s ease forwards;
 }
 
@@ -149,12 +150,12 @@
 
   /* HERO */
   .hero {
-    padding: 100px 20px;
+    padding: 48px 20px 100px;
   }
 
   .hero .logo {
-    max-width: 140px;
-    margin-bottom: 25px;
+    width: min(220px, 70vw);
+    margin-bottom: 8px;
   }
 
   .hero h1 {
@@ -221,7 +222,11 @@
 @media (max-width: 480px) {
 
   .hero {
-    padding: 80px 15px;
+    padding: 40px 15px 80px;
+  }
+
+  .hero .logo {
+    width: min(190px, 70vw);
   }
 
   .hero h1 {

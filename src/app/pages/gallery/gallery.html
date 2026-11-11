@@ -8,77 +8,161 @@
     </p>
   </header>
 
-  <details class="collection" id="moises" open>
-    <summary class="collection-heading">
-      <div class="collection-title">
-        <span class="eyebrow">Del team</span>
-        <h2 id="moises-title">Moisés <span aria-hidden="true">🐒</span></h2>
-      </div>
-      <span class="expand-hint">
-        <span>Abrir / cerrar</span>
-        <span class="expand-icon" aria-hidden="true">⌄</span>
-      </span>
-    </summary>
+  <section class="collection" id="moises">
+    <h2 class="collection-heading">
+      <button
+        class="collection-toggle"
+        type="button"
+        [attr.aria-expanded]="expandedCollections.moises"
+        aria-controls="moises-content"
+        (click)="toggleCollection('moises')"
+      >
+          <span class="collection-title">
+            <span class="eyebrow">Del team</span>
+            <span class="collection-name" id="moises-title">Moisés</span>
+          </span>
+          <span class="expand-hint">
+            <span>Abrir / cerrar</span>
+            <span class="expand-icon" aria-hidden="true">⌄</span>
+          </span>
+      </button>
+    </h2>
 
-    <div class="collection-content">
-      <div class="collection-intro">
-        <p>¡Ya puedes expresarte con Moisés con su sombrerito de Teemo!</p>
-        <a routerLink="/about">Conoce al team <span aria-hidden="true">↗</span></a>
-      </div>
+    <div
+      class="collection-content"
+      id="moises-content"
+      [class.expanded]="expandedCollections.moises"
+      [attr.aria-hidden]="!expandedCollections.moises"
+      [attr.inert]="expandedCollections.moises ? null : ''"
+    >
+      <div class="collection-content-inner">
+        <div class="collection-intro">
+          <p>¡Ya puedes expresarte con Moisés con su sombrerito de Teemo!</p>
+          <a routerLink="/about">Conoce al team <span aria-hidden="true">↗</span></a>
+        </div>
 
-      <div class="emote-grid">
-        @for (emote of moisesEmotes; track $index) {
-          <article class="emote-card">
-            @if (emote.image) {
-              <img [src]="emote.image" [alt]="emote.alt">
-            } @else {
-              <div class="image-slot" role="img" [attr.aria-label]="'Espacio para ' + emote.alt">
-                <span class="slot-plus" aria-hidden="true">+</span>
-                <span>Próximo emoticono</span>
-              </div>
-            }
-            <h3>{{ emote.title }}</h3>
-          </article>
-        }
+        <div class="emote-grid">
+          @for (emote of moisesEmotes; track $index) {
+            <article class="emote-card">
+              @if (emote.image) {
+                <img [src]="emote.image" [alt]="emote.alt">
+              } @else {
+                <div class="image-slot" role="img" [attr.aria-label]="'Espacio para ' + emote.alt">
+                  <span class="slot-plus" aria-hidden="true">+</span>
+                  <span>Próximo emoticono</span>
+                </div>
+              }
+              <h3>{{ emote.title }}</h3>
+            </article>
+          }
+        </div>
       </div>
     </div>
-  </details>
+  </section>
 
-  <details class="collection" id="ggmery" open>
-    <summary class="collection-heading">
-      <div class="collection-title">
-        <span class="eyebrow">Del team</span>
-        <h2 id="ggmery-title">GGmery / Patxirisu <span aria-hidden="true">🦊</span></h2>
-      </div>
-      <span class="expand-hint">
-        <span>Abrir / cerrar</span>
-        <span class="expand-icon" aria-hidden="true">⌄</span>
-      </span>
-    </summary>
+  <section class="collection" id="patata">
+    <h2 class="collection-heading">
+      <button
+        class="collection-toggle"
+        type="button"
+        [attr.aria-expanded]="expandedCollections.patata"
+        aria-controls="patata-content"
+        (click)="toggleCollection('patata')"
+      >
+        <span class="collection-title">
+          <span class="eyebrow">Del team</span>
+          <span class="collection-name" id="patata-title">Patata</span>
+        </span>
+        <span class="expand-hint">
+          <span>Abrir / cerrar</span>
+          <span class="expand-icon" aria-hidden="true">⌄</span>
+        </span>
+      </button>
+    </h2>
 
-    <div class="collection-content">
-      <div class="collection-intro">
-        <p>Tarot, ukelele y estornudos de ardilla: emoticonos para cada mood.</p>
-        <a routerLink="/about" fragment="ggmery">Conoce al team <span aria-hidden="true">↗</span></a>
-      </div>
+    <div
+      class="collection-content"
+      id="patata-content"
+      [class.expanded]="expandedCollections.patata"
+      [attr.aria-hidden]="!expandedCollections.patata"
+      [attr.inert]="expandedCollections.patata ? null : ''"
+    >
+      <div class="collection-content-inner">
+        <div class="collection-intro">
+          <p>¡Ya puedes expresarte con Patata (que es una patata)!</p>
+          <a routerLink="/about">Conoce al team <span aria-hidden="true">↗</span></a>
+        </div>
 
-      <div class="emote-grid">
-        @for (emote of ggmeryEmotes; track $index) {
-          <article class="emote-card">
-            @if (emote.image) {
-              <img [src]="emote.image" [alt]="emote.alt">
-            } @else {
-              <div class="image-slot" role="img" [attr.aria-label]="'Espacio para ' + emote.alt">
-                <span class="slot-plus" aria-hidden="true">+</span>
-                <span>Próximo emoticono</span>
-              </div>
-            }
-            <h3>{{ emote.title }}</h3>
-          </article>
-        }
+        <div class="emote-grid">
+          @for (emote of patataEmotes; track $index) {
+            <article class="emote-card">
+              @if (emote.image) {
+                <img [src]="emote.image" [alt]="emote.alt">
+              } @else {
+                <div class="image-slot" role="img" [attr.aria-label]="'Espacio para ' + emote.alt">
+                  <span class="slot-plus" aria-hidden="true">+</span>
+                  <span>Próximo emoticono</span>
+                </div>
+              }
+              <h3>{{ emote.title }}</h3>
+            </article>
+          }
+        </div>
       </div>
     </div>
-  </details>
+  </section>
+
+  <section class="collection" id="ggmery">
+    <h2 class="collection-heading">
+      <button
+        class="collection-toggle"
+        type="button"
+        [attr.aria-expanded]="expandedCollections.ggmery"
+        aria-controls="ggmery-content"
+        (click)="toggleCollection('ggmery')"
+      >
+        <span class="collection-title">
+          <span class="eyebrow">Del team</span>
+          <span class="collection-name" id="ggmery-title">GGmery</span>
+        </span>
+        <span class="expand-hint">
+          <span>Abrir / cerrar</span>
+          <span class="expand-icon" aria-hidden="true">⌄</span>
+        </span>
+      </button>
+    </h2>
+
+    <div
+      class="collection-content"
+      id="ggmery-content"
+      [class.expanded]="expandedCollections.ggmery"
+      [attr.aria-hidden]="!expandedCollections.ggmery"
+      [attr.inert]="expandedCollections.ggmery ? null : ''"
+    >
+      <div class="collection-content-inner">
+        <div class="collection-intro">
+          <p>Tarot, ukelele y estornudos de ardilla: emoticonos para cada mood.</p>
+          <a routerLink="/about" fragment="ggmery">Conoce al team <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="emote-grid">
+          @for (emote of ggmeryEmotes; track $index) {
+            <article class="emote-card">
+              @if (emote.image) {
+                <img [src]="emote.image" [alt]="emote.alt">
+              } @else {
+                <div class="image-slot" role="img" [attr.aria-label]="'Espacio para ' + emote.alt">
+                  <span class="slot-plus" aria-hidden="true">+</span>
+                  <span>Próximo emoticono</span>
+                </div>
+              }
+              <h3>{{ emote.title }}</h3>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="community" id="comunidad">
     <span class="community-icon" aria-hidden="true">🎨</span>

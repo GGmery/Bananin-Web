@@ -9,6 +9,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './gallery.css',
 })
 export class Gallery {
+  readonly expandedCollections = {
+    moises: true,
+    patata: true,
+    ggmery: true,
+  };
+
+  toggleCollection(collection: keyof typeof this.expandedCollections): void {
+    this.expandedCollections[collection] = !this.expandedCollections[collection];
+  }
+
   // Guarda las imágenes en src/assets y escribe aquí sus rutas relativas.
   readonly moisesEmotes = [
     { title: 'Asombrado', alt: 'Moisés asombrado', image: 'assets/moises_asombrado_.png' },
@@ -26,5 +36,14 @@ export class Gallery {
     { title: 'Emoticono 4', alt: 'Emoticono de GGmery 4', image: '' },
     { title: 'Emoticono 5', alt: 'Emoticono de GGmery 5', image: '' },
     { title: 'Emoticono 6', alt: 'Emoticono de GGmery 6', image: '' },
+  ];
+
+  readonly patataEmotes = [
+    { title: 'Asombrada', alt: 'Emoticono de Patata 1', image: 'assets/patata_asombrada.png' },
+    { title: 'Chula', alt: 'Emoticono de Patata 2', image: 'assets/patata_chula.png' },
+    { title: 'Pensativa', alt: 'Emoticono de Patata 3', image: 'assets/patata_pensativa.png' },
+    { title: 'Ilusionada', alt: 'Emoticono de Patata 4', image: 'assets/patata_ilusionada.png' },
+    { title: 'Husbandos', alt: 'Emoticono de Patata 5', image: 'assets/patata_husbandos.png' },
+    { title: 'Dormida', alt: 'Emoticono de Patata 6', image: 'assets/patata_dormida.png' },
   ];
 }
